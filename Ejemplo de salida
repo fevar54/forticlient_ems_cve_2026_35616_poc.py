@@ -1,0 +1,27 @@
+============================================================
+CVE-2026-35616 - FortiClient EMS Detector
+Affects: versions 7.4.5 through 7.4.6
+============================================================
+[*] Target: https://192.168.1.100:8443
+[*] Checking 7 endpoints...
+------------------------------------------------------------
+[!] /api/v1/system/status → HTTP 200 (VULNERABLE)
+[!] /api/v1/tenants → HTTP 200 (VULNERABLE)
+[+] /api/v1/admin/users → HTTP 403 (Protected)
+[+] /api/v1/deployments → HTTP 401 (Protected)
+[+] /api/v1/logs/events → HTTP 403 (Protected)
+[!] /api/v1/init → HTTP 200 (VULNERABLE)
+[+] /api/v1/health → HTTP 200 (Protected - endpoint público)
+------------------------------------------------------------
+
+============================================================
+RESULTADO
+============================================================
+
+[!] VULNERABLE: 3 endpoints accesibles sin autenticación
+
+    → /api/v1/system/status
+    → /api/v1/tenants
+    → /api/v1/init
+
+[!] Aplicar hotfix de Fortinet inmediatamente (FG-IR-26-099)
