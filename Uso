@@ -1,0 +1,14 @@
+python3 cve_2026_35616_detector.py -t <URL_DEL_SERVIDOR>
+Ejemplos
+1. Escaneo básico
+
+python3 cve_2026_35616_detector.py -t https://192.168.1.100:8443
+2. Modo verbose (más detalles)
+
+python3 cve_2026_35616_detector.py -t https://192.168.1.100:8443 -v
+3. Salida en formato JSON
+
+python3 cve_2026_35616_detector.py -t https://192.168.1.100:8443 --json
+4. Guardar resultado en archivo
+
+python3 cve_2026_35616_detector.py -t https://192.168.1.100:8443 --json > reporte.json
